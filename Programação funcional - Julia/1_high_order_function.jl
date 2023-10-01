@@ -11,7 +11,7 @@ metodo_comparacao(x) = x.i + x.f
 comparar_horarios(comp) = (x, y) -> comp(x) < comp(y)
 
 # Chamando a função `sort` da Julia de forma destrutiva, onde irá utilizar para cada elemento a função `comparar_horarios` para ordenar os dados
-sort!(horarios, lt= comparar_horarios(metodo_comparacao))
+sort!(horarios, lt=comparar_horarios(metodo_comparacao))
 
 # Exibindo resultado
 for h in horarios
