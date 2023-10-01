@@ -1,4 +1,5 @@
 # High Order Function é uma função que aceita outras funções como argumentos e/ou retorna funções como resultado.
+
 # Aqui iremos representar o exemplo da ordenação de horários vista em sala
 
 # Criando o array de horários desordenaos. Aqui utilizamos uma NamedTuple da Julia para representar os horários

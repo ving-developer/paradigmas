@@ -1,4 +1,5 @@
 # Closure é o uso de um parâmetro ainda não definido no escopo de uma função interna, mas que será definido em uma função externa.
+
 # Aqui iremos representar o exemplo da filtragem de disciplinas vista em sala
 
 # Criando o array de disciplinas
