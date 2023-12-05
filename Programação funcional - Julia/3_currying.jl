@@ -20,10 +20,16 @@ disciplinas = [
 # Por fim, retorna um Bool indicando se a disciplina contem cada um dos filtros passados que não sejam `nothing`
 filtrar = tit -> chr -> cat -> x -> (tit === nothing || occursin(tit, x.titulo)) && (chr === nothing || x.cargaHoraria ∈ chr) && (cat === nothing || x.categoria == cat)
 
+filtrarPorTitulo = filtrar("academia")
+FiltrarTituloCh = filtrarPorTitulo(nothing)
+FiltrarDisciplinas = FiltrarTituloCh("curso")
 # Chamando a função `filter` passando o Currying `filtrar`, filtrando por titulo e categoria neste exemplo (carga horária recebe nothing)
-filter!(filtrar("academia")(nothing)("curso"), disciplinas)
+filtrarDisciplina2 = FiltrarTituloCh("projeto")
+# filter(filtrar("academia")(nothing)(nothing), disciplinas)
+println(filter(FiltrarDisciplinas, disciplinas))
+println(filter(filtrarDisciplina2, disciplinas))
 
-# Exibindo resultado
-for d in disciplinas
-    println(d)
-end
+# # Exibindo resultado
+# for d in disciplinas
+#     println(d)
+# end
